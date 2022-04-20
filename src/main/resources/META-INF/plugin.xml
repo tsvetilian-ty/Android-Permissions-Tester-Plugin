@@ -9,13 +9,11 @@
 
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.android</depends>
-    <depends>com.intellij.modules.androidstudio</depends>
-
-    <extensions defaultExtensionNs="com.intellij">
-
-    </extensions>
 
     <actions>
-
+        <action id="com.github.tsvetilian.ty.androidpermissionstester.action.OpenAtpPanel"
+                class="com.github.tsvetilian.ty.androidpermissionstester.action.OpenAtpPanel" text="Permissions Tester">
+            <add-to-group group-id="ToolsMenu" anchor="before" relative-to-action="AgpUpgrade"/>
+        </action>
     </actions>
 </idea-plugin>
