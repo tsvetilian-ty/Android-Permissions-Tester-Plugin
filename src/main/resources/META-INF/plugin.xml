@@ -1,0 +1,21 @@
+<idea-plugin>
+    <id>com.github.tsvetilian.ty.android-permissions-tester</id>
+    <name>Android Permissions Tester</name>
+    <vendor url="https://github.com/tsvetilian-ty">Tsvetilian Yankov</vendor>
+
+    <description><![CDATA[
+    Test your Android application permissions with ease!
+  ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <actions>
+
+    </actions>
+</idea-plugin>
