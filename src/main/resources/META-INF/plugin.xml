@@ -13,7 +13,7 @@
     <actions>
         <action id="com.github.tsvetilian.ty.androidpermissionstester.action.OpenAtpPanel"
                 class="com.github.tsvetilian.ty.androidpermissionstester.action.OpenAtpPanel" text="Permissions Tester"
-                icon="com.github.tsvetilian.ty.androidpermissionstester.ui.helper.PermissionTesterIcons.Icon">
+                icon="AllIcons.CodeWithMe.CwmPermissions">
             <add-to-group group-id="ToolsMenu" anchor="before" relative-to-action="AgpUpgrade"/>
             <add-to-group group-id="ToolbarRunGroup" anchor="last"/>
         </action>
