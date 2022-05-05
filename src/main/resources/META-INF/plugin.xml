@@ -4,16 +4,18 @@
     <vendor url="https://github.com/tsvetilian-ty">Tsvetilian Yankov</vendor>
 
     <description><![CDATA[
-    Test your Android application permissions with ease!
-  ]]></description>
+    Android Permissions Tester helps you test different permissions states in your application
+    ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.android</depends>
 
     <actions>
         <action id="com.github.tsvetilian.ty.androidpermissionstester.action.OpenAtpPanel"
-                class="com.github.tsvetilian.ty.androidpermissionstester.action.OpenAtpPanel" text="Permissions Tester">
+                class="com.github.tsvetilian.ty.androidpermissionstester.action.OpenAtpPanel" text="Permissions Tester"
+                icon="com.github.tsvetilian.ty.androidpermissionstester.ui.helper.PermissionTesterIcons.Icon">
             <add-to-group group-id="ToolsMenu" anchor="before" relative-to-action="AgpUpgrade"/>
+            <add-to-group group-id="ToolbarRunGroup" anchor="last"/>
         </action>
     </actions>
 </idea-plugin>
