@@ -1,11 +1,15 @@
 package com.github.tsvetilian.ty.androidpermissionstester.core
 
-import com.intellij.notification.NotificationDisplayType
-import com.intellij.notification.NotificationGroup
+import com.intellij.notification.NotificationGroupManager
+import com.intellij.notification.NotificationType
 import com.intellij.openapi.project.Project
 
-fun Project?.notify(title: String, message: String) {
-    NotificationGroup
-        .create("Permissions Tester Notifications", NotificationDisplayType.BALLOON, false, "apt-w-id", null, "", null)
-        .createNotification(title, message).notify(this)
+fun Project?.notify(title: String, message: String, type: NotificationType = NotificationType.INFORMATION) {
+    NotificationGroupManager.getInstance()
+        .getNotificationGroup("Android Permissions Tester")
+        .createNotification(
+            title,
+            message,
+            type
+        ).notify(this)
 }
