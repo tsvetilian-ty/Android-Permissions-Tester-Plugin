@@ -6,6 +6,7 @@ import com.github.tsvetilian.ty.androidpermissionstester.core.Commands
 import com.github.tsvetilian.ty.androidpermissionstester.core.Language
 import com.github.tsvetilian.ty.androidpermissionstester.core.notify
 import com.github.tsvetilian.ty.androidpermissionstester.domain.repository.DeviceRepository
+import com.intellij.notification.NotificationType
 import com.intellij.openapi.project.Project
 import org.jetbrains.android.sdk.AndroidSdkUtils
 
@@ -30,7 +31,8 @@ class DeviceRepositoryImpl(
         } catch (error: Throwable) {
             project.notify(
                 Language.NOTIFICATION_TITLE,
-                Language.getUnableToGrandPermissionMessage(permission, packageName)
+                Language.getUnableToGrandPermissionMessage(permission, packageName),
+                NotificationType.ERROR
             )
             return
         }
@@ -44,7 +46,8 @@ class DeviceRepositoryImpl(
         } catch (error: Throwable) {
             project.notify(
                 Language.NOTIFICATION_TITLE,
-                Language.getUnableToRevokePermissionMessage(permission, packageName)
+                Language.getUnableToRevokePermissionMessage(permission, packageName),
+                NotificationType.ERROR
             )
             return
         }
@@ -59,7 +62,8 @@ class DeviceRepositoryImpl(
             } catch (error: Throwable) {
                 project.notify(
                     Language.NOTIFICATION_TITLE,
-                    Language.getUnableToGrandAllPermissionsMessage(packageName)
+                    Language.getUnableToGrandAllPermissionsMessage(packageName),
+                    NotificationType.ERROR
                 )
                 return
             }
@@ -75,7 +79,8 @@ class DeviceRepositoryImpl(
             } catch (error: Throwable) {
                 project.notify(
                     Language.NOTIFICATION_TITLE,
-                    Language.getUnableToRevokeAllPermissionsMessage(packageName)
+                    Language.getUnableToRevokeAllPermissionsMessage(packageName),
+                    NotificationType.ERROR
                 )
                 return
             }

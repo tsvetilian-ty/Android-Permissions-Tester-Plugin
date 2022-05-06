@@ -10,6 +10,12 @@
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.android</depends>
 
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Android Permissions Tester"
+                           displayType="BALLOON"
+                           key="android.permissions.tester"/>
+    </extensions>
+
     <actions>
         <action id="com.github.tsvetilian.ty.androidpermissionstester.action.OpenAtpPanel"
                 class="com.github.tsvetilian.ty.androidpermissionstester.action.OpenAtpPanel" text="Permissions Tester"
