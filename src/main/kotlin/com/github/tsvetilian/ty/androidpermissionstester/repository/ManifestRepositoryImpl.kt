@@ -16,7 +16,7 @@ class ManifestRepositoryImpl(
         try {
             for (module in project.allModules()) {
                 val androidFacet = AndroidFacet.getInstance(module) ?: continue
-                val manifestFile = AndroidRootUtil.getManifestFileForCompiler(androidFacet) ?: continue
+                val manifestFile = AndroidRootUtil.getPrimaryManifestFile(androidFacet) ?: continue
                 val manifest =
                     AndroidUtils.loadDomElement(androidFacet.module, manifestFile, Manifest::class.java) ?: continue
                 return manifest.`package`.toString()
@@ -34,7 +34,7 @@ class ManifestRepositoryImpl(
         try {
             for (module in project.allModules()) {
                 val androidFacet = AndroidFacet.getInstance(module) ?: continue
-                val manifestFile = AndroidRootUtil.getManifestFileForCompiler(androidFacet) ?: continue
+                val manifestFile = AndroidRootUtil.getPrimaryManifestFile(androidFacet) ?: continue
                 val manifest =
                     AndroidUtils.loadDomElement(androidFacet.module, manifestFile, Manifest::class.java) ?: continue
                 result.addAll(manifest.usesPermissions.map { per -> per.name.toString() })
