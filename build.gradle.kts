@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.tsvetilian.ty"
-version = "1.3"
+version = "1.4"
 
 repositories {
     mavenCentral()
@@ -28,7 +28,7 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("211")
-        untilBuild.set("222.*")
+        untilBuild.set("223.*")
     }
 
     runIde {

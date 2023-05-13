@@ -28,6 +28,9 @@ class PermissionsActionsPanel(
                     icon = PermissionTesterIcons.RevokePermission
                     this@PermissionsActionsPanel.toolTipText = Language.TOOLTIP_REVOKE
                 }
+                else -> {
+                    println("Unknown type")
+                }
             }
             addActionListener {
                 actionCb?.invoke(permissionType)
